@@ -1,5 +1,7 @@
 package com.codecool.expert;
 
+import org.w3c.dom.NodeList;
+
 public class FactParser extends XMLParser {
 
   public FactRepository fRepository;
@@ -12,6 +14,8 @@ public class FactParser extends XMLParser {
 
     FactRepository repository = new FactRepository();
     loadXmlDocument("Fact.xml");
-    NodeList factList = doc.getElementByTagName("Fact");
+    NodeList factList = doc.getElementsByTagName("Fact");
+
+    return repository;
   }
 }
