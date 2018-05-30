@@ -16,8 +16,6 @@ public class FactIterator implements Iterator<Fact> {
   public boolean hasNext() {
 
     if (this.facts.size() > index) return true;
-
-    this.index = 0;
     return false;
   }
 
