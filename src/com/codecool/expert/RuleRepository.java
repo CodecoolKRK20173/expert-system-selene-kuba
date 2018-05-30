@@ -1,31 +1,49 @@
 package com.codecool.expert;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import org.w3c.dom.NodeList;
+
+import java.util.List;
+
 public class RuleRepository {
 
-    private final Map<String, Question> questions = new HashMap<String, Question>();
+    public Map<String, Question> questionsMap = new HashMap<String, Question>();
 
-    public RuleRepository() {
+    public RuleRepository(NodeList questions) {
         QuestionIterator questIterator = new QuestionIterator();
+        while (questIterator.hasNext()) {
+            addQuestion(questIterator.next());
+        }
     }
 
     public void addQuestion(Question question) {
-        questions.put(question.getId(), question);
+        questionsMap.put(question.getId(), question);
     }
 
     private class QuestionIterator implements Iterator {
+        private List<Question> questions = new ArrayList<>(questionsMap.values());
+        private int index;
+
+        public QuestionIterator() {
+            this.index = 0;
+            this.questions = questions;
+        }
+
         @Override
         public boolean hasNext() {
-            if (questions.size() < RuleParser.ruleList.getLength()) return true;
+            if (questions.size() > index) return true;
             return false;
         }
 
         @Override
-        public Object next() {
-            return new Object();
+        public Question next() {
+            Question question = questions.get(index);
+            this.index = index++;
+            return question;
         }
     }
 

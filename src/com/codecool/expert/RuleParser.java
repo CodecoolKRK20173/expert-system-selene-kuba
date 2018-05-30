@@ -5,15 +5,15 @@ import org.w3c.dom.NodeList;
 public class RuleParser extends XMLParser {
 
     private RuleRepository ruleRepo;
-    public static NodeList ruleList;
+    public NodeList ruleList;
     
     public RuleRepository getRuleRepository() {
-        return new RuleRepository();
+        return this.ruleRepo;
     }
 
     public RuleParser() {
-        this.ruleRepo = getRuleRepository();
         loadXmlDocument("src/com/codecool/expert/Rules.xml");
-        this.ruleList = doc.getElementsByTagName("Question");
+        this.ruleList = doc.getElementsByTagName("Rule");
+        this.ruleRepo = new RuleRepository(ruleList);
     }
 }
