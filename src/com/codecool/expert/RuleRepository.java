@@ -41,8 +41,9 @@ public class RuleRepository {
 
         @Override
         public Question next() {
-            Question question = questions.get(index);
-            this.index = index++;
+            Question question = questions.get(index++);
+            //this.index = index++;
+            System.out.print(question);
             return question;
         }
     }
