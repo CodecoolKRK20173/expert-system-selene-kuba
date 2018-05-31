@@ -15,15 +15,12 @@ public class QuestionIterator implements Iterator {
 
     @Override
     public boolean hasNext() {
-        if (questions.size() > index) return true;
-        return false;
+        return questions.size() > index;
     }
 
     @Override
     public Question next() {
         Question question = questions.get(index++);
-        //this.index = index++;
-        System.out.print(question);
         return question;
     }
 }

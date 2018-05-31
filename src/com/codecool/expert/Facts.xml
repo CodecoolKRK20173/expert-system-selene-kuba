@@ -52,4 +52,15 @@ siedział Ci na twarzy i zlizywał kocią karmę z włosów."/>
             <Eval id="colour">true</Eval>
         </Evals>
     </Fact>
+    <Fact id="pechowiec">
+        <Description value="Pechowiec - jak to mówią, im więcej samobójców, tym mniej samobójców, ale
+chyba masz skłonność do nadinterpretacji. Dostaniesz wyrok śmierci od rządu za morderstwo, bo strzał, który
+wycelujesz w swoją głowę przejdzie na wylot i zabijesz swoją ukochaną..."/>
+        <Evals>
+            <Eval id="time">true</Eval>
+            <Eval id="anime">false</Eval>
+            <Eval id="kitty">false</Eval>
+            <Eval id="colour">false</Eval>
+        </Evals>
+    </Fact>    
 </Facts>
