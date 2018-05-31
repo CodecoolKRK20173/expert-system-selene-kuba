@@ -9,11 +9,15 @@ public class Answer {
 
     public boolean evaluateAnswerByInput(String input) {
         for (Value value : values) {
-            if (value.getInputPattern().contains(input)) return true;
+            if (value.getInputPattern().contains(input)) return value.getSelectionType();
         } return false;
     }
 
     public void addValue(Value value) {
         this.values.add(value);
     }
-}
+
+    public List<Value> getValues() {
+        return values;
+    }
+ }

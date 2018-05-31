@@ -23,15 +23,22 @@ public class ESProvider {
             while(!isAnswerCorrect){
                 System.out.println(question.getQuestion());
                 String userInput = getUserAnswer();
-                Boolean evaluatedAnswer = question.getEvaluatedAnswer(userInput);
-            if(evaluatedAnswer){
+            if(isInputProper(userInput, question)){
                 isAnswerCorrect = true;
                 this.answers.put(question.getId(), question.getEvaluatedAnswer(userInput));
             }
             }
         }
         System.out.println(answers);
+    }
 
+    private boolean isInputProper(String userInput, Question question) {
+        List<Value> values = question.getAnswer().getValues();
+        for (Value value : values) {
+            for (String pattern : value.getInputPattern()) {
+            if (pattern.equals(userInput)) return true; 
+            }
+        } return false;
     }
     private String getUserAnswer(){
         Scanner scn = new Scanner(System.in);
@@ -51,15 +58,14 @@ public class ESProvider {
             int matches = 0;
             for (String id : factIdSet){
 
-                if(this.answers.get(id).equals(fact.getValueById(id)))
-                        matches++;
-                }
+                if(this.answers.get(id).equals(fact.getValueById(id))) matches++;
+            }
             if(matches == factIdSet.size()){
                 isMatch = true;
                 System.out.println(fact.getDescription());
             }
         }
-        if(!isMatch) System.out.println("Nie jesteś samobójcą - nie stać Cię :)");
+        if(!isMatch) System.out.println("Kup se mietłe");
     }
 
 }
