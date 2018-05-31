@@ -23,7 +23,7 @@ public class ESProvider {
                 System.out.println(question.getQuestion());
                 String userInput = getUserAnswer();
                 Boolean evaluatedAnswer = question.getEvaluatedAnswer(userInput);
-            if(evaluatedAnswer != null){
+            if(!evaluatedAnswer){
                 isAnswerCorrect = true;
                 this.answers.put(question.getId(), question.getEvaluatedAnswer(userInput));
             }
@@ -50,8 +50,9 @@ public class ESProvider {
             int matches = 0;
             for (String id : factIdSet){
 
-                if(this.answers.get(id).equals(fact.getValueById(id))) matches++;
-            }
+                if(this.answers.get(id).equals(fact.getValueById(id)))
+                        matches++;
+                }
             if(matches == factIdSet.size()){
                 isMatch = true;
                 System.out.println(fact.getDescription());

@@ -8,6 +8,8 @@ public class Main {
     FactParser factP = new FactParser();
    FactRepository factR = factP.getFactRepository();
     Iterator<Fact> iterF = factR.getIterator();
+    RuleParser ruleP = new RuleParser();
+    RuleRepository ruleR = new RuleRepository();
     while (iterF.hasNext()) {
       Fact fact = iterF.next();
       System.out.println(fact.id);
@@ -15,5 +17,8 @@ public class Main {
       System.out.println(fact.getIdSet());
       System.out.println(fact.getValueSet());
     }
+    ESProvider esp = new ESProvider(factP, ruleP);
+    esp.collectAnswers();
+    esp.evaluate();
   }
 }
