@@ -18,7 +18,6 @@ public class Main {
       System.out.println(fact.getValueSet());
     }
     ESProvider esp = new ESProvider(factP, ruleP);
-    esp.collectAnswers();
     esp.evaluate();
   }
 }

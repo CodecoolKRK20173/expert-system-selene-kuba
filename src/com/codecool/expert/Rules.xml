@@ -4,10 +4,10 @@
         <Question>Czy masz ochotę umrzeć w najbliższym czasie?</Question>
         <Answer>
             <Selection value="true">
-                <SingleValue value="yes"/>
+                <SingleValue value="tak"/>
             </Selection>
             <Selection value="false">
-                <SingleValue value="no"/>
+                <SingleValue value="nie"/>
             </Selection>
         </Answer>
     </Rule>
@@ -15,10 +15,10 @@
         <Question>Czy jesteś miłośnikiem anime lub 4chana?</Question>
         <Answer>
             <Selection value="true">
-                <SingleValue value="yes"/>
+                <SingleValue value="tak"/>
             </Selection>
             <Selection value="false">
-                <SingleValue value="no"/>
+                <SingleValue value="nie"/>
             </Selection>
         </Answer>
     </Rule>

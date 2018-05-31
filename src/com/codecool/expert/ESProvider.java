@@ -10,6 +10,7 @@ public class ESProvider {
     public ESProvider(FactParser factParser, RuleParser ruleParser){
          this.factRepository = factParser.getFactRepository();
          this.ruleRepository = ruleParser.getRuleRepository();
+         collectAnswers();
     }
     public void collectAnswers(){
         Iterator<Question> questionIterator = ruleRepository.getIterator();
@@ -23,7 +24,7 @@ public class ESProvider {
                 System.out.println(question.getQuestion());
                 String userInput = getUserAnswer();
                 Boolean evaluatedAnswer = question.getEvaluatedAnswer(userInput);
-            if(!evaluatedAnswer){
+            if(evaluatedAnswer){
                 isAnswerCorrect = true;
                 this.answers.put(question.getId(), question.getEvaluatedAnswer(userInput));
             }
@@ -58,7 +59,7 @@ public class ESProvider {
                 System.out.println(fact.getDescription());
             }
         }
-        if(!isMatch) System.out.println("Kup se mietłe");
+        if(!isMatch) System.out.println("Nie jesteś samobójcą - nie stać Cię :)");
     }
 
 }
