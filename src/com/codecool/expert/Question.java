@@ -20,8 +20,6 @@ public class Question {
     }
 
     public boolean getEvaluatedAnswer(String input) {
-        //if (input.equals()) {
-            return true;
-        //}
+        return answer.evaluateAnswerByInput(input);
     }
 }
