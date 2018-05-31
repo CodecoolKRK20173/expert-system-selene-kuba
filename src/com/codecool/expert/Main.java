@@ -1,13 +1,21 @@
 package com.codecool.expert;
 
+import java.util.Iterator;
+import java.util.Map.*;
+
 public class Main {
 
-
   public static void main(String[] args) {
-    FactParser factParser = new FactParser();
-    RuleParser ruleParser = new RuleParser();
-    
-    ESProvider provider = new ESProvider(factParser, ruleParser);
-    //XMLParser.loadXmlDocument("src/com/codecool/expert/Rules.xml");
+    FactRepository factR = new FactRepository();
+    FactParser factP = new FactParser();
+    factR = factP.getFactRepository();
+    Iterator<Fact> iterF = factR.getIterator();
+    while (iterF.hasNext()) {
+      Fact fact = iterF.next();
+      System.out.println(fact.id);
+      System.out.println(fact.getDescription());
+      System.out.println(fact.getIdSet());
+      System.out.println(fact.getValueSet());
+    }
   }
 }

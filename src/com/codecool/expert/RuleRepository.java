@@ -3,26 +3,24 @@ package com.codecool.expert;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
-
-import org.w3c.dom.NodeList;
-
 import java.util.List;
+import java.util.Map;
+import org.w3c.dom.NodeList;
 
 public class RuleRepository {
 
-    public Map<String, Question> questionsMap = new HashMap<String, Question>();
+  public Map<String, Question> questionsMap = new HashMap<String, Question>();
 
-    public RuleRepository(NodeList questions) {
-        QuestionIterator questIterator = new QuestionIterator();
-        while (questIterator.hasNext()) {
-            addQuestion(questIterator.next());
-        }
+  public RuleRepository() {
+    QuestionIterator questIterator = new QuestionIterator();
+    while (questIterator.hasNext()) {
+      addQuestion(questIterator.next());
     }
+  }
 
-    public void addQuestion(Question question) {
-        questionsMap.put(question.getId(), question);
-    }
+  public void addQuestion(Question question) {
+    questionsMap.put(question.getId(), question);
+  }
 
     private class QuestionIterator implements Iterator {
         private List<Question> questions = new ArrayList<>(questionsMap.values());
@@ -47,9 +45,10 @@ public class RuleRepository {
             return question;
         }
     }
+  }
 
-    // public Iterator<Question> getIterator() {
+  // public Iterator<Question> getIterator() {
 
-    // }
+  // }
 
-}
+
