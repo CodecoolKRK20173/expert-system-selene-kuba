@@ -25,10 +25,11 @@ public class RuleParser extends XMLParser {
     private void createRuleRepository() {
         for (int i = 0; i < ruleList.getLength(); i++) {
             Element rule = (Element) ruleList.item(i);
-            String id = rule.getAttribute("id");            
             Element elementQuest = (Element) rule.getElementsByTagName("Question").item(0);
-            String quest = elementQuest.getTextContent();
             NodeList selectionList = rule.getElementsByTagName("Selection");
+            
+            String id = rule.getAttribute("id");            
+            String quest = elementQuest.getTextContent();
             Answer answer = new Answer();
             addValuesTo(answer, selectionList);
             Question question = new Question(id, quest, answer);

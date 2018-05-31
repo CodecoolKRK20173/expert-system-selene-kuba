@@ -8,7 +8,9 @@ public class Answer {
     private List<Value> values = new ArrayList<Value>();
 
     public boolean evaluateAnswerByInput(String input) {
-        return true;
+        for (Value value : values) {
+            if (value.getInputPattern().contains(input)) return true;
+        } return false;
     }
 
     public void addValue(Value value) {
