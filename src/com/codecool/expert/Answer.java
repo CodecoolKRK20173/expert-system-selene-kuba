@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Answer {
 
-    private List<Value> values = new ArrayList<Value>();
+    private final List<Value> values = new ArrayList<>();
 
     public boolean evaluateAnswerByInput(String input) {
         for (Value value : values) {

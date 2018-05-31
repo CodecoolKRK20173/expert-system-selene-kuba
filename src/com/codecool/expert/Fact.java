@@ -6,12 +6,11 @@ import java.util.Map;
 import java.util.Set;
 
 public class Fact {
-  String id;
-  String description;
-  Map<String, Boolean> valueId;
+  private final String description;
+  private final Map<String, Boolean> valueId;
 
   public Fact(String id, String description) {
-    this.id = id;
+    String id1 = id;
     this.description = description;
     this.valueId = new HashMap<>();
   }

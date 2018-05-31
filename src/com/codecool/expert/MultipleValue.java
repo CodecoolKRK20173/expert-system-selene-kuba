@@ -2,11 +2,9 @@ package com.codecool.expert;
 
 import java.util.List;
 
-public class MultipleValue extends Value {
-    private List<String> params;
+class MultipleValue extends Value {
 
     public MultipleValue(List<String> params, boolean selectionType) {
-        this.params = params;
         this.selectionType = selectionType;
         inputPattern.addAll(params);
     }

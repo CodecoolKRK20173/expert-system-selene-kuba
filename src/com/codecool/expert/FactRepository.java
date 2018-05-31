@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class FactRepository {
-  private List<Fact> facts;
+  private final List<Fact> facts;
 
   FactRepository() {
     this.facts = new ArrayList<>();

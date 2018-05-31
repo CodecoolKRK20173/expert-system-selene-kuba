@@ -1,9 +1,9 @@
 package com.codecool.expert;
 
 public class Question {
-    private String id;
-    private String question;
-    private Answer answer;
+    private final String id;
+    private final String question;
+    private final Answer answer;
 
     public Question(String id, String question, Answer answer) {
         this.id = id;

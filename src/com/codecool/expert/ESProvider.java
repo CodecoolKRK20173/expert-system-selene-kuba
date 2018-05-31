@@ -2,9 +2,9 @@ package com.codecool.expert;
 
 import java.util.*;
 
-public class ESProvider {
-    private FactRepository factRepository;
-    private RuleRepository ruleRepository;
+class ESProvider {
+    private final FactRepository factRepository;
+    private final RuleRepository ruleRepository;
     private Map<String, Boolean> answers;
 
     public ESProvider(FactParser factParser, RuleParser ruleParser){
@@ -30,7 +30,6 @@ public class ESProvider {
             }
             }
         }
-        System.out.println(answers);
 
     }
     private String getUserAnswer(){
