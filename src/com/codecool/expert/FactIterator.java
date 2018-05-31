@@ -4,8 +4,8 @@ import java.util.Iterator;
 import java.util.List;
 
 public class FactIterator implements Iterator<Fact> {
-  public List<Fact> facts;
-  public int index;
+  private List<Fact> facts;
+  private int index;
 
   public FactIterator(List<Fact> facts) {
     this.facts = facts;
@@ -15,8 +15,7 @@ public class FactIterator implements Iterator<Fact> {
   @Override
   public boolean hasNext() {
 
-    if (this.facts.size() > index) return true;
-    return false;
+      return this.facts.size() > index;
   }
 
   @Override

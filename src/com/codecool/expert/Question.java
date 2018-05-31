@@ -20,6 +20,14 @@ public class Question {
     }
 
     public boolean getEvaluatedAnswer(String input) {
-        return answer.evaluateAnswerByInput(input);
+        try{
+            return answer.evaluateAnswerByInput(input);
+        }catch(IllegalArgumentException e){
+            System.out.println("NO OPTION!");
+        }
+        return false;
+    }
+    public String getQuestion(){
+        return this.question;
     }
 }

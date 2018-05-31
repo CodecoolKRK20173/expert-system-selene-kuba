@@ -15,8 +15,7 @@ public class QuestionIterator implements Iterator {
 
     @Override
     public boolean hasNext() {
-        if (questions.size() > index) return true;
-        return false;
+        return questions.size() > index;
     }
 
     @Override

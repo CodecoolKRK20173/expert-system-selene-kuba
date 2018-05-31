@@ -1,6 +1,5 @@
 package com.codecool.expert;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -62,7 +61,6 @@ public class RuleParser extends XMLParser {
     }
 
     private Boolean isEmpty(NodeList values) {
-        if (values.getLength() > 0) return false;
-        return true;
+        return values.getLength() <= 0;
     }
 }
