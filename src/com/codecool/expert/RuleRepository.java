@@ -13,15 +13,12 @@ public class RuleRepository {
 
   public Map<String, Question> questionsMap = new HashMap<String, Question>();
 
-  public RuleRepository() {
-  }
-
   public void addQuestion(Question question) {
     questionsMap.put(question.getId(), question);
   }
 
   public Iterator<Question> getIterator() {
-    List<Question> questions =  new ArrayList<Question>(questionsMap.values());
+    List<Question> questions =  new ArrayList<>(questionsMap.values());
     return new QuestionIterator(questions);
   }
 }
