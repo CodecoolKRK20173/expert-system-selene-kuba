@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Rules>
-    <Rule id="money">
-        <Question>Do you have 20.000.000 HUF for a car?</Question>
+    <Rule id="time">
+        <Question>Czy masz ochotę umrzeć w najbliższym czasie?</Question>
         <Answer>
             <Selection value="true">
                 <SingleValue value="yes"/>
@@ -11,25 +11,36 @@
             </Selection>
         </Answer>
     </Rule>
-    <Rule id="comfort">
-        <Question>What is more important for you?</Question>
+        <Rule id="anime">
+        <Question>Czy jesteś miłośnikiem anime lub 4chana?</Question>
         <Answer>
             <Selection value="true">
-                <SingleValue value="comfort"/>
+                <SingleValue value="yes"/>
             </Selection>
             <Selection value="false">
-                <SingleValue value="speed"/>
+                <SingleValue value="no"/>
             </Selection>
         </Answer>
     </Rule>
-    <Rule id="luxury">
-        <Question>What feature is must-have for you?</Question>
+    <Rule id="kitty">
+        <Question>A jakbyś miał w rączkach takiego małego puszystego koteczka... wolisz go głaskać czy zabić?</Question>
         <Answer>
             <Selection value="true">
-                <MultipleValue value="gps,bluetooth,dvd,automatic transmission,self-driving"/>
+                <SingleValue value="zabić"/>
             </Selection>
             <Selection value="false">
-                <MultipleValue value="nothing,abs,fog lights,central lock"/>
+                <SingleValue value="głaskać"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="colour">
+        <Question>Jaki jest Twój ulubiony kolor?</Question>
+        <Answer>
+            <Selection value="true">
+                <MultipleValue value="czarny,czerwony,fioletowy,niebieski,srebrny,różowy"/>
+            </Selection>
+            <Selection value="false">
+                <MultipleValue value="złoty,biały,zielony,żółty,pomarańczowy,brązowy"/>
             </Selection>
         </Answer>
     </Rule>
