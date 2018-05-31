@@ -7,12 +7,11 @@ public class Answer {
 
     private List<Value> values = new ArrayList<Value>();
 
-
     public boolean evaluateAnswerByInput(String input) {
         return true;
     }
 
     public void addValue(Value value) {
-        
+        this.values.add(value);
     }
 }

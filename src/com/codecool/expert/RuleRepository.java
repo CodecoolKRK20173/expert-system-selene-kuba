@@ -11,7 +11,7 @@ public class RuleRepository {
 
   public Map<String, Question> questionsMap = new HashMap<String, Question>();
 
-  public RuleRepository(NodeList questions) {
+  public RuleRepository() {
     QuestionIterator questIterator = new QuestionIterator();
     while (questIterator.hasNext()) {
       addQuestion(questIterator.next());
@@ -22,24 +22,28 @@ public class RuleRepository {
     questionsMap.put(question.getId(), question);
   }
 
-  private class QuestionIterator implements Iterator {
-    private List<Question> questions = new ArrayList<>(questionsMap.values());
-    private int index;
+    private class QuestionIterator implements Iterator {
+        private List<Question> questions = new ArrayList<>(questionsMap.values());
+        private int index;
 
-    public QuestionIterator() {
-      this.index = 0;
-      this.questions = questions;
-    }
+        public QuestionIterator() {
+            this.index = 0;
+            this.questions = questions;
+        }
 
-    @Override
-    public boolean hasNext() {
-      if (questions.size() < index) return true;
-      return false;
-    }
+        @Override
+        public boolean hasNext() {
+            if (questions.size() > index) return true;
+            return false;
+        }
 
-    @Override
-    public Question next() {
-      return questions.get(index++);
+        @Override
+        public Question next() {
+            Question question = questions.get(index++);
+            //this.index = index++;
+            System.out.print(question);
+            return question;
+        }
     }
   }
 
@@ -47,4 +51,4 @@ public class RuleRepository {
 
   // }
 
-}
+
