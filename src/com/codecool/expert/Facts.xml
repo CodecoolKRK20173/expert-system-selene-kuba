@@ -1,30 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Facts>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
+    <Fact id="anon">
+        <Description value="Anon stulej - życie nołlajfa nie jest Ci obce!
+        Lurkujesz od rana do nocy. Umrzesz na oczach internetowej publiczności wyskakując przez okno, 
+        a świat w końcu pozna prawdę o polskim papieżu i dzieciach, bo będzie wypisana na Twoich plecach."/>
         <Evals>
-            <Eval id="family">true</Eval>
-            <Eval id="money">true</Eval>
-            <Eval id="comfort">false</Eval>
-            <Eval id="luxury">true</Eval>
+            <Eval id="time">true</Eval>
+            <Eval id="anime">true</Eval>
+            <Eval id="kitty">false</Eval>
+            <Eval id="colour">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="mokka">
-        <Description value="Opel Mokka"/>
+    <Fact id="seryjny">
+        <Description value="Seryjny samobójca - uwielbiasz zabijać, szczególnie siebie! 
+        Problem w tym, że nigdy Ci się nie udaje. Kup sobie lepiej ciastko."/>
         <Evals>
-            <Eval id="family">true</Eval>
-            <Eval id="money">false</Eval>
-            <Eval id="comfort">false</Eval>
-            <Eval id="luxury">true</Eval>
+            <Eval id="time">true</Eval>
+            <Eval id="anime">false</Eval>
+            <Eval id="kitty">true</Eval>
+            <Eval id="colour">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="lada">
-        <Description value="Lada"/>
+    <Fact id="hipokryta">
+        <Description value="Hipokryta - choćbyś całe życie przeżył bez śmierci to gdzieś w środku
+        jesteś samobójcą całym sercem! I śnisz o martwych kotkach. Czemu śnisz o martwych kotkach?"/>
         <Evals>
-            <Eval id="family">false</Eval>
-            <Eval id="money">false</Eval>
-            <Eval id="comfort">false</Eval>
-            <Eval id="luxury">false</Eval>
+            <Eval id="time">false</Eval>
+            <Eval id="anime">false</Eval>
+            <Eval id="kitty">true</Eval>
+            <Eval id="colour">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="bohatyr">
+        <Description value="Bohatyr... w wieku 86 lat rzucisz się pod rozpędzoną ciężarówkę. 
+        Ludzie nawet nie domyślą się, że to samobójstwo, bo przypadkiem uratujesz jakieś dziecko"/>
+        <Evals>
+            <Eval id="time">false</Eval>
+            <Eval id="anime">false</Eval>
+            <Eval id="kitty">false</Eval>
+            <Eval id="colour">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="kawaii">
+        <Description value="Kawaii samobójca-chan - Twoja śmierć będzie najsłodszym samobójstwem świata! 
+        Znajdą cię ubranego w kocie uszka i z doczepionym ogonkiem wśród swoich waifu. Twój kot będzie 
+        siedział Ci na twarzy i zlizywał kocią karmę z włosów."/>
+        <Evals>
+            <Eval id="time">true</Eval>
+            <Eval id="anime">true</Eval>
+            <Eval id="kitty">true</Eval>
+            <Eval id="colour">true</Eval>
         </Evals>
     </Fact>
 </Facts>
