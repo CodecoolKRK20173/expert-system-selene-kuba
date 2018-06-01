@@ -5,10 +5,10 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
 
-public abstract class XMLParser {
-  public Document doc;
+abstract class XMLParser {
+  Document doc;
 
-  public void loadXmlDocument(String xmlPath) {
+  void loadXmlDocument(String xmlPath) {
     try {
       File file = new File(xmlPath);
       DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();

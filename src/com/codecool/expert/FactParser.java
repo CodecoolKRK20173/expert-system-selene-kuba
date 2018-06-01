@@ -4,12 +4,10 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-public class FactParser extends XMLParser {
-
-  public FactRepository fRepository;
+class FactParser extends XMLParser {
 
   public FactParser() {
-    this.fRepository = new FactRepository();
+    FactRepository fRepository = new FactRepository();
   }
 
   public FactRepository getFactRepository() {

@@ -2,9 +2,9 @@ package com.codecool.expert;
 
 import java.util.*;
 
-public class ESProvider {
-    private FactRepository factRepository;
-    private RuleRepository ruleRepository;
+class ESProvider {
+    private final FactRepository factRepository;
+    private final RuleRepository ruleRepository;
     private Map<String, Boolean> answers;
 
     public ESProvider(FactParser factParser, RuleParser ruleParser){
@@ -37,7 +37,7 @@ public class ESProvider {
         List<Value> values = question.getAnswer().getValues();
         for (Value value : values) {
             for (String pattern : value.getInputPattern()) {
-            if (pattern.equals(userInput)) return true; 
+            if (pattern.equals(userInput)) return true;
             }
         } return false;
     }

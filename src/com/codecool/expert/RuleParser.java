@@ -5,10 +5,10 @@ import java.util.List;
 
 import org.w3c.dom.*;
 
-public class RuleParser extends XMLParser {
+class RuleParser extends XMLParser {
 
-    private RuleRepository ruleRepo;
-    public NodeList ruleList;
+    private final RuleRepository ruleRepo;
+    private final NodeList ruleList;
 
     
     public RuleRepository getRuleRepository() {

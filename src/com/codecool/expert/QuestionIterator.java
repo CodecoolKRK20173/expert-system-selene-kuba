@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class QuestionIterator implements Iterator {
+class QuestionIterator implements Iterator {
     private List<Question> questions = new ArrayList<>();
     private int index;
 
@@ -20,7 +20,6 @@ public class QuestionIterator implements Iterator {
 
     @Override
     public Question next() {
-        Question question = questions.get(index++);
-        return question;
+        return questions.get(index++);
     }
 }

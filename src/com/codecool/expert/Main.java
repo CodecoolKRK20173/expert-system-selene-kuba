@@ -2,7 +2,7 @@ package com.codecool.expert;
 
 import java.util.Iterator;
 
-public class Main {
+class Main {
 
   public static void main(String[] args) {
     RuleParser ruleParser = new RuleParser();

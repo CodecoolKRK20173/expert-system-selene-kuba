@@ -3,8 +3,8 @@ package com.codecool.expert;
 import java.util.Iterator;
 import java.util.List;
 
-public class FactIterator implements Iterator<Fact> {
-  private List<Fact> facts;
+class FactIterator implements Iterator<Fact> {
+  private final List<Fact> facts;
   private int index;
 
   public FactIterator(List<Fact> facts) {
