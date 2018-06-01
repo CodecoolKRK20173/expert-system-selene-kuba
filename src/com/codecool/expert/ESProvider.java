@@ -10,7 +10,9 @@ public class ESProvider {
     public ESProvider(FactParser factParser, RuleParser ruleParser){
          this.factRepository = factParser.getFactRepository();
          this.ruleRepository = ruleParser.getRuleRepository();
+         clearScreen();
          collectAnswers();
+         evaluate();
     }
     public void collectAnswers(){
         Iterator<Question> questionIterator = ruleRepository.getIterator();
@@ -29,7 +31,6 @@ public class ESProvider {
             }
             }
         }
-        System.out.println(answers);
     }
 
     private boolean isInputProper(String userInput, Question question) {
@@ -40,6 +41,7 @@ public class ESProvider {
             }
         } return false;
     }
+    
     private String getUserAnswer(){
         Scanner scn = new Scanner(System.in);
         return scn.nextLine();
@@ -62,10 +64,15 @@ public class ESProvider {
             }
             if(matches == factIdSet.size()){
                 isMatch = true;
-                System.out.println(fact.getDescription());
+                System.out.println("Twój typ samobójcy:\n" + fact.getDescription());
             }
         }
-        if(!isMatch) System.out.println("Kup se mietłe");
+        if(!isMatch) System.out.println("Nie jesteś samobójcą i nie zostaniesz nim :( nie stać Cię!");
     }
+
+    public static void clearScreen() {  
+        System.out.print("\033[H\033[2J");  
+        System.out.flush();  
+    }      
 
 }

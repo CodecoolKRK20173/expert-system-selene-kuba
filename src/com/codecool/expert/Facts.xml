@@ -7,7 +7,7 @@ a świat w końcu pozna prawdę o polskim papieżu i dzieciach, bo będzie wypis
         <Evals>
             <Eval id="time">true</Eval>
             <Eval id="anime">true</Eval>
-            <Eval id="kitty">false</Eval>
+            <Eval id="kitty">true</Eval>
             <Eval id="colour">true</Eval>
         </Evals>
     </Fact>
@@ -62,5 +62,16 @@ wycelujesz w swoją głowę przejdzie na wylot i zabijesz swoją ukochaną..."/>
             <Eval id="kitty">false</Eval>
             <Eval id="colour">false</Eval>
         </Evals>
-    </Fact>    
+    </Fact>  
+    <Fact id="linijkarz">
+        <Description value="Linijkarz - przed śmiercią będziesz rozdawać linijki o długości 22cm, mówiąc, że tak długa jest Twoja stopa. 
+Na każdej z nich będzie zaszyfrowana informacja o tym, gdzie i kiedy śmierć napotka Cię za sprawą różowej linijki w Hello Kitty.
+Tak, to Ty, Linijkarz, jeden z ocalałych członków załogi greckiego tankowca Lotus. "/>
+        <Evals>
+            <Eval id="time">true</Eval>
+            <Eval id="anime">false</Eval>
+            <Eval id="kitty">false</Eval>
+            <Eval id="colour">true</Eval>
+        </Evals>
+    </Fact>   
 </Facts>

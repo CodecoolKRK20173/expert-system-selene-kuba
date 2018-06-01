@@ -14,9 +14,6 @@ public abstract class XMLParser {
       DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();
       DocumentBuilder dBuilder = dFactory.newDocumentBuilder();
       doc = dBuilder.parse(file);
-
-      System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
-
     } catch (Exception e) {
       e.printStackTrace();
     }
